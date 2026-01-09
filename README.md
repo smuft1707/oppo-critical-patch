@@ -34,5 +34,7 @@ The parameter `cb` within the intent is passed directly to a deserialization sin
 4. Verify that `com.poc.silentinstall` (or the dummy app) is installed on the system.
 
 ---
+Recommendation: > "The application should avoid using ObjectInputStream.readObject() on data coming from untrusted Intents. Instead, use a safer serialization format like JSON or implement a strict ObjectInputFilter to whitelist only expected classes during deserialization."
+---
 **Author:** [smuft1707](https://github.com/smuft1707)
 **Reported to:** Oppo Security Team (HackerOne)
