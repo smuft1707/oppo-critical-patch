@@ -8,7 +8,7 @@ This repository is created for security research purposes only and is part of a 
 - **Vulnerability:** Insecure Deserialization in `OapsProvider` / `WebBridgeActivity`
 - **Vector:** Remote via Deep Link (`oaps://`)
 - **Impact:** Critical (Full Device Compromise via Silent APK Installation)
-- **CVSS Score:** 9.8 - 10.0 (Critical)
+- **CVSS Score:** 
 
 ## 🔍 Technical Description
 The Oppo App Market application exports an activity named `com.cdo.oaps.host.old.WebBridgeActivity`. This activity processes incoming intents through the `oaps://` scheme. 
